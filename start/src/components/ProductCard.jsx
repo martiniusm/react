@@ -7,6 +7,9 @@ export default function ProductCard({category, img, title, price, setAmount, pro
         price: price,
         prodid: prodid
     })
+
+
+
     const handleClick = () => {
         const exist = cart.find(item => item.prodid === product.prodid)
         setCart((prevCart) => 
@@ -23,7 +26,7 @@ export default function ProductCard({category, img, title, price, setAmount, pro
 
     return(
         <article>
-            <img src={"website_images/PROD_"+img} alt={title} />
+            <img src={"/website_images/PROD_"+img} alt={title} />
             <a href="#">{category}</a>
             <h3>{title}</h3>
             <span>Kr. {price}</span>

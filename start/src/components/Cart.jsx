@@ -21,7 +21,14 @@ function CartProduct({title, price, quantity, setCart, prodid}) {
         <section id="cart" className={toggle ? "show" : null}>
                 <h2>Din handlevogn</h2>
                 <ul id="cartlist">
-                  {cart.map(product => <CartProduct key={product.prodid} prodid={product.prodid} setCart={setCart} title={product.title} price={product.price} quantity={product.quantity} />)}
+                  {cart.map(product => <CartProduct 
+                  key={product.prodid} 
+                  prodid={product.prodid} 
+                  setCart={setCart} 
+                  title={product.title} 
+                  price={product.price} 
+                  quantity={product.quantity} 
+                  />)}
                 </ul>
             </section>
     )
